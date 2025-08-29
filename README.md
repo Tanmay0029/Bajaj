@@ -1,103 +1,99 @@
-# 📌 VIT Full Stack Question Paper – REST API Solution - Bajaj Finserv Q1
+---
 
-This is a **Node.js + Express** implementation of the Full Stack question paper task from VIT.  
-The API exposes a single endpoint (`POST /bfhl`) that accepts an array and returns filtered/processed data as per the problem statement.
+# 🚀 VIT Full Stack – REST API (Bajaj Finserv Q1)
+
+A simple **Node.js + Express** REST API solution for the VIT Full Stack question paper task.
+The API processes an input array and returns categorized data (numbers, alphabets, special characters, etc.).
 
 ---
 
-## 🚀 Features
-- Accepts a JSON array containing numbers, alphabets, and special characters.
-- Returns:
-  - ✅ Success status
-  - ✅ User ID in format `full_name_ddmmyyyy`
-  - ✅ Email & Roll Number
-  - ✅ Odd numbers
-  - ✅ Even numbers
-  - ✅ Alphabets (uppercase)
-  - ✅ Special characters
-  - ✅ Sum of numbers (as string)
-  - ✅ Concatenated alphabets (reverse order, alternating caps)
+## 📖 Features
+
+* Accepts an array of values in JSON format.
+* Returns:
+
+  * **Status** (success/failure)
+  * **User ID** in `full_name_ddmmyyyy` format
+  * **Email & Roll Number**
+  * **Odd Numbers** (as strings)
+  * **Even Numbers** (as strings)
+  * **Alphabets** (uppercase only)
+  * **Special Characters**
+  * **Sum of Numbers** (string)
+  * **Concatenated String** (alphabets reversed + alternating caps)
 
 ---
 
 ## 🛠 Tech Stack
-- **Node.js**
-- **Express.js**
-- **CORS**
-- **Dotenv** (for environment variables)
+
+* Node.js
+* Express.js
+* CORS
+* Dotenv (environment variables)
 
 ---
 
-## 📂 Project Structure
+## 📂 Folder Structure
+
+```
+.
+├── server.js        # Express application
+├── package.json     # Dependencies & scripts
+├── .env             # User details (ignored in Git)
+└── README.md        # Documentation
 ```
 
-.
-├── server.js        # Main Express app
-├── package.json     # Dependencies & scripts
-├── .env             # User details (not committed to Git)
-└── README.md
-
-````
-
 ---
 
-## ⚙️ Setup Instructions
+## ⚙️ Setup Guide
 
-### 1. Clone Repo
+### 1️⃣ Clone the Repository
+
 ```bash
 git clone https://github.com/<your-username>/vit-bfhl-api.git
 cd vit-bfhl-api
-````
+```
 
-### 2. Install Dependencies
+### 2️⃣ Install Dependencies
 
 ```bash
 npm install
 ```
 
-### 3. Configure Environment Variables
+### 3️⃣ Configure Environment Variables
 
 Create a `.env` file:
 
 ```env
-FULL_NAME=john_doe       # lowercase with underscores
-DOB_DDMMYYYY=17091999    # ddmmyyyy format
+FULL_NAME=john_doe
+DOB_DDMMYYYY=17091999
 EMAIL=john@xyz.com
 ROLL_NUMBER=ABCD123
 PORT=3000
 ```
 
-### 4. Run Locally
+### 4️⃣ Run Locally
 
 ```bash
 npm run dev
 ```
 
-Server starts at:
-
-```
-http://localhost:3000
-```
+Server will start at:
+👉 `http://localhost:3000`
 
 ---
 
-## 🧪 API Usage
+## 🧪 API Reference
 
-### Endpoint
+### 🔹 POST `/bfhl`
 
-```
-POST /bfhl
-```
-
-### Request Example
+**Request Body**
 
 ```json
-{
-  "data": ["a", "1", "334", "4", "R", "$"]
-}
+{ "data": ["a", "1", "334", "4", "R", "$"] }
 ```
 
-### Response Example
+**Response Example**
 
 ```json
 {
@@ -116,40 +112,9 @@ POST /bfhl
 
 ---
 
-## 🔗 Deployment
+### 🔹 GET `/`
 
-You can deploy this API on:
-
-* [Render](https://render.com)
-* [Railway](https://railway.app)
-* [Vercel](https://vercel.com)
-* [Heroku](https://heroku.com)
-
-### Example for Render
-
-1. Push repo to GitHub.
-2. Create a new **Web Service** on Render → connect repo.
-3. Add Environment Variables (`FULL_NAME`, `DOB_DDMMYYYY`, `EMAIL`, `ROLL_NUMBER`).
-4. Start Command:
-
-   ```bash
-   npm start
-   ```
-5. Your endpoint will be available at:
-
-   ```
-   https://<your-app-name>.onrender.com/bfhl
-   ```
-
----
-
-## ✅ Health Check
-
-```
-GET /
-```
-
-Response:
+**Response**
 
 ```json
 { "status": "ok", "route": "/bfhl" }
@@ -157,17 +122,45 @@ Response:
 
 ---
 
-## 📌 Notes
+## 🌐 Deployment Options
 
-* All numbers in response are returned as **strings**.
-* `concat_string` is built by reversing all alphabets and applying **alternating caps**.
-* Errors and invalid inputs return a safe fallback response with `"is_success": false`.
+You can host this API on:
+
+* [Render](https://render.com)
+* [Railway](https://railway.app)
+* [Vercel](https://vercel.com)
+* [Heroku](https://heroku.com)
+
+**Render Example:**
+
+1. Push repo → GitHub
+2. Create new Web Service → Connect repo
+3. Add environment variables
+4. Start command:
+
+   ```bash
+   npm start
+   ```
+5. API endpoint:
+
+   ```
+   https://<your-app>.onrender.com/bfhl
+   ```
 
 ---
 
-## ✨ Author
+## 📌 Notes
 
-Developed by **Vinayak Raina**
-📧 Email: `vinayak.raina2022@vitstudent.ac.in`
-🎓 Roll No: `22BCE2052`
-```
+* All numbers are returned as **strings**.
+* `concat_string` = reversed alphabets with **alternating caps**.
+* Invalid inputs return a safe fallback with `"is_success": false`.
+
+---
+
+## 👨‍💻 Author
+
+**Tanmay Agrawal**
+📧 `tanmay.agrawal2022@vitstudent.ac.in`
+🎓 Roll No: `22BCE2680`
+
+---
