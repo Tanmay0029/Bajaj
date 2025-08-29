@@ -1,0 +1,38 @@
+{
+    "name": "vit-fullstack-api",
+    "version": "1.0.0",
+    "description": "REST API for VIT Full Stack Question Paper",
+    "main": "index.js",
+    "scripts": {
+        "start": "node index.js",
+        "dev": "nodemon index.js",
+        "test": "node test.js"
+    },
+    "dependencies": {
+        "cors": "^2.8.5",
+        "express": "^4.21.2"
+    },
+    "devDependencies": {
+        "nodemon": "^3.1.10"
+    },
+    "engines": {
+        "node": ">=14.0.0"
+    },
+    "keywords": [
+        "nodejs",
+        "express",
+        "rest-api",
+        "vit"
+    ],
+    "author": "Tanmay Agrawal",
+    "license": "MIT",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/Tanmay0029/Bajaj.git"
+    },
+    "type": "commonjs",
+    "bugs": {
+        "url": "https://github.com/Tanmay0029/Bajaj/issues"
+    },
+    "homepage": "https://github.com/Tanmay0029/Bajaj#readme"
+}
